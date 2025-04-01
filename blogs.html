@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .blog-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .blog-post {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg justify-content-center bg-success">
+        <ul class="nav nav-pills">
+            <li class="nav-item position-absolute end-0 me-3">
+                <a href="#" class="nav-link text-light" onclick="logout()">Log Out</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light bg-secondary active" aria-current="page" href="">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="quiz.html">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="profile.html">Profile</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="blog-container">
+            
+            <div class="blog-post">
+                <h2>What is Python?</h2>
+                <img src="./images/python.png" alt="python" class="d-block mx-auto">
+                <p class="text-muted">Published on March 31, 2025</p>
+                <p>Python is a high-level, general-purpose programming language known for its simplicity and readability.  It was designed to be easy to learn and use, making it a great choice for beginners while still being powerful enough for advanced developers. Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming.</p>
+
+                <p>One of Python’s biggest strengths is its vast ecosystem of libraries and frameworks, which allow developers to build applications ranging from web development and artificial intelligence to cybersecurity and automation. Its strong community and extensive documentation make problem-solving easier, further solidifying Python as one of the most popular programming languages today.</p>
+            </div>
+            <hr>
+
+            <div class="blog-post">
+                <h2>The Importance of Cybersecurity</h2>
+                <img src="./images/cybersecurity.avif" alt="cybersecurity" class="d-block mx-auto img-fluid">
+                <p class="text-muted">Published on March 25, 2025</p>
+                <p>In a world where almost everything is connected to the internet, cybersecurity plays a critical role in protecting personal and business data from cyber threats. Cybercriminals use various techniques, such as phishing, malware, and ransomware attacks, to steal sensitive information or disrupt systems. Without proper security measures, individuals and organizations risk financial loss, identity theft, and reputational damage.</p>
+                
+                <p>Cybersecurity is not just about preventing attacks but also about ensuring data integrity, confidentiality, and availability. Using strong passwords, keeping software updated, and enabling two-factor authentication are some basic steps individuals can take to stay secure online. On a larger scale, businesses invest in firewalls, encryption, and security policies to safeguard their systems from cyber threats.</p>
+            </div>
+            <hr>
+
+            <div class="blog-post">
+                <h2>How Are Ads Chosen for a User?</h2>
+                <img src="./images/ads.png" alt="ads" class="d-block mx-auto img-fluid">
+                <p class="text-muted">Published on March 09, 2025</p>
+                <p>Online ads are carefully selected for users based on their browsing history, search queries, location, and online behavior. Advertising platforms use tracking technologies such as cookies and device fingerprinting to collect data on what users search for, the websites they visit, and even how long they spend on a particular page. This information is then used to serve personalized ads that are more likely to capture the user’s interest.</p>
+
+                <p>Social media platforms and search engines also play a significant role in ad targeting. They analyze user interactions, likes, and past purchases to refine ad recommendations. While this level of personalization improves the relevance of ads, it also raises concerns about user privacy. As a result, many platforms now provide options for users to control how their data is used for advertising.</p>
+            </div>
+            <hr>
+
+            <div class="blog-post">
+                <h2>Analyzing the Eclipse</h2>
+                <img src="./images/eclipse.jpg" alt="eclipse" class="d-block mx-auto img-fluid">
+                <p class="text-muted">Published on February 28, 2025</p>
+                <p>An eclipse is a celestial event that occurs when one astronomical object moves into the shadow of another. There are two main types: solar eclipses and lunar eclipses. A solar eclipse happens when the Moon passes between the Earth and the Sun, blocking sunlight partially or completely. A lunar eclipse, on the other hand, occurs when the Earth casts its shadow on the Moon, causing it to appear darkened or reddish in color.</p>
+
+                <p>Eclipses have fascinated civilizations for centuries, often being interpreted as mystical or supernatural events. Today, they are studied scientifically to understand celestial mechanics and planetary motion. Observing an eclipse requires proper eye protection, especially during a solar eclipse, to avoid damage to the eyes.</p>
+            </div>
+            <hr>
+
+            <div class="blog-post">
+                <h2>Are Strong Passwords Even Important?</h2>
+                <img src="./images/password.jpg" alt="password" class="d-block mx-auto img-fluid">
+                <p class="text-muted">Published on February 21, 2025</p>
+                <p>A strong password is one of the most basic yet crucial defenses against cyber threats. Many cyberattacks exploit weak passwords, allowing hackers to gain unauthorized access to personal accounts and sensitive data. A secure password should be long, unpredictable, and include a combination of uppercase and lowercase letters, numbers, and special characters.</p>
+
+                <p>Using the same password across multiple accounts increases the risk of a security breach if one account gets compromised. That’s why cybersecurity experts recommend using a password manager to generate and store complex passwords securely. Additionally, enabling two-factor authentication (2FA) adds an extra layer of security, making it harder for hackers to access accounts even if they obtain the password.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            if (confirm("Are you sure you want to log out?")) {
+                window.location.href = "login.html"; // Redirect to login page
+            }
+        }
+    </script>
+</body>
+</html>
