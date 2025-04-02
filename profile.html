@@ -5,25 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .profile-container {
-            max-width: 400px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg justify-content-center bg-success">
@@ -43,11 +24,12 @@
     </ul>
   </nav>  
 
-  <div class="container mt-4">
-    <div class="profile-container">
+  <div class="container mt-4 d-flex justify-content-center">
+    <div class="card p-4 shadow text-center" style="max-width: 400px;">
+      <div class="d-flex justify-content-center">
         <input type="file" id="profile-pic-input" accept="image/*" hidden>
-        <img src="./images/no-image.jpg" alt="Profile Picture" class="profile-img" id="profile-pic">
-        
+        <img src="./images/no-image.jpg" alt="Profile Picture" class="rounded-circle img-fluid mb-3" id="profile-pic" style="width: 120px; height: 120px; object-fit: cover; cursor: pointer;">
+      </div>
         <div class="text-start">
             <div class="mb-2" id="name-container">
                 <label class="fw-bold">Name:</label>
@@ -74,16 +56,14 @@
             </div>
         </div>
 
-        <button class="btn btn-success w-100" onclick="saveAndReload()">Save Changes</button>
+        <a href="profile.html" class="btn btn-success w-100" onclick="saveProfile()">Save Changes</a>
     </div>
   </div>
 
-  <script src="profile.js">
-    function logout() {
-        if (confirm("Are you sure you want to log out?")) {
-            window.location.href = "login.html";
-        }
-    }
-  </script>
+  <a href="portfolio.html" class="btn btn-success position-fixed bottom-0 end-0 m-3">
+    Developer's Portfolio
+  </a>
+
+  <script src="./scripts/profile.js"></script>
 </body>
 </html>

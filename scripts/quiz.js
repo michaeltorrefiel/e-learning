@@ -1,3 +1,4 @@
+// QUIZ JS
 const quizData = [
     {
         question: "What is a general-purpose programming language known for its readability and ease of use?",
@@ -123,3 +124,10 @@ nextBtn.addEventListener('click', () => {
 });
 
 loadQuestion();
+
+// LOGOUT JS
+function logout() {
+    if (confirm("Are you sure you want to log out?")) {
+        window.location.href = "login.html";
+    }
+}

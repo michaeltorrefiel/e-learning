@@ -18,7 +18,7 @@
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" required>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Login</button>
+            <button type="submit" class="btn btn-success w-100">Login</button>
         </form>
         <p class="text-center mt-3">Don't have an account? <a href="register.html">Register</a></p>
         <p id="errorMessage" class="text-danger text-center mt-2"></p>
@@ -34,7 +34,7 @@
 
             if (storedUser && storedUser.email === email && storedUser.password === password) {
                 localStorage.setItem("loggedInUser", JSON.stringify(storedUser));
-                window.location.href = "profile.html"; // Redirect after login
+                window.location.href = "profile.html";
             } else {
                 document.getElementById("errorMessage").textContent = "Invalid credentials!";
             }

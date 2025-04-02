@@ -1,3 +1,4 @@
+// PROFILE MANAGEMENT JS
 document.addEventListener("DOMContentLoaded", function() {
     const user = JSON.parse(localStorage.getItem("user")) || {};
     
@@ -78,11 +79,13 @@ function saveProfile() {
     document.getElementById("fullname").textContent = `${user.f_name} ${user.l_name}`;
     document.getElementById("email").textContent = user.email;
     document.getElementById("birthday").value = user.birthday || "";
-
+    
     document.getElementById("birthday").disabled = true;
 }
 
-function saveAndReload() {
-    saveProfile();
-    window.location.reload();
+// LOGOUT JS
+function logout() {
+    if (confirm("Are you sure you want to log out?")) {
+        window.location.href = "login.html";
+    }
 }
