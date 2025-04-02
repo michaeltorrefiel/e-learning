@@ -57,7 +57,7 @@ function loadQuestion() {
     updateProgress();
 }
 
-function selectOption(selectedButton, optionIndex) {
+function selectOption(selectedButton) {
     const buttons = optionsEl.getElementsByClassName('option');
     Array.from(buttons).forEach(button => button.classList.remove('selected'));
     selectedButton.classList.add('selected');
@@ -77,7 +77,10 @@ function startTimer() {
 
 function checkAnswer() {
     const selectedOption = document.querySelector('.option.selected');
-    if (!selectedOption) return;
+    if (!selectedOption){
+        selectedOption.classList.add('incorrect');
+        optionsEl.children[question.correct].classList.add('correct');
+    }
 
     const selectedAnswer = Array.from(optionsEl.children).indexOf(selectedOption);
     const question = quizData[currentQuestion];

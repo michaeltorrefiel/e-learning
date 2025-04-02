@@ -12,7 +12,7 @@
         <form id="loginForm">
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" class="form-control" id="email" required> <!-- validate email format -->
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
@@ -32,8 +32,7 @@
             
             const storedUser = JSON.parse(localStorage.getItem("user"));
 
-            if (storedUser && storedUser.email === email && storedUser.password === password) {
-                localStorage.setItem("loggedInUser", JSON.stringify(storedUser));
+            if (storedUser && storedUser.email === email && storedUser.password === password) { 
                 window.location.href = "profile.html";
             } else {
                 document.getElementById("errorMessage").textContent = "Invalid credentials!";

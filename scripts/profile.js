@@ -1,5 +1,5 @@
 // PROFILE MANAGEMENT JS
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() { // execute func on html load
     const user = JSON.parse(localStorage.getItem("user")) || {};
     
     document.getElementById("fullname").textContent = `${user.f_name} ${user.l_name}`;
@@ -10,19 +10,19 @@ document.addEventListener("DOMContentLoaded", function() {
     if (profilePic) {
         document.getElementById("profile-pic").src = profilePic;
     }
-    document.getElementById("profile-pic").addEventListener("click", () => {
+    document.getElementById("profile-pic").addEventListener("click", () => { // on profile pic click, trigger hidden img input
         document.getElementById("profile-pic-input").click();
     });
 
-    document.getElementById("profile-pic-input").addEventListener("change", function(event) {
+    document.getElementById("profile-pic-input").addEventListener("change", function(event) { // execute on profile pic change
         const file = event.target.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onload = function(e) {
-                document.getElementById("profile-pic").src = e.target.result;
-                localStorage.setItem("profilePic", e.target.result);
+                document.getElementById("profile-pic").src = e.target.result; // base64 encode img for local storage
+                localStorage.setItem("profilePic", e.target.result); // store b64 on local storage
             };
-            reader.readAsDataURL(file);
+            reader.readAsDataURL(file); // display image
         }
     });
 });

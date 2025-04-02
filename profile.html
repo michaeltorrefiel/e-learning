@@ -10,7 +10,7 @@
   <nav class="navbar navbar-expand-lg justify-content-center bg-success">
     <ul class="nav nav-pills">
         <li class="nav-item position-absolute end-0 me-3">
-          <a href="#" class="nav-link text-light" onclick="logout()">Log Out</a>
+          <a href="" class="nav-link text-light" onclick="logout()">Log Out</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light" href="blogs.html">Blogs</a>
@@ -19,7 +19,7 @@
           <a class="nav-link text-light" href="quiz.html">Quiz</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light bg-secondary active" aria-current="page" href="profile.html">Profile</a>
+          <a class="nav-link text-light bg-secondary active" href="profile.html">Profile</a>
         </li>
     </ul>
   </nav>  
@@ -27,8 +27,8 @@
   <div class="container mt-4 d-flex justify-content-center">
     <div class="card p-4 shadow text-center" style="max-width: 400px;">
       <div class="d-flex justify-content-center">
-        <input type="file" id="profile-pic-input" accept="image/*" hidden>
-        <img src="./images/no-image.jpg" alt="Profile Picture" class="rounded-circle img-fluid mb-3" id="profile-pic" style="width: 120px; height: 120px; object-fit: cover; cursor: pointer;">
+        <input type="file" id="profile-pic-input" accept="image/*" hidden> <!-- hidden to hide form -->
+        <img src="./images/no-image.jpg" alt="Profile Picture" class="rounded-circle img-fluid mb-3" id="profile-pic" style="width: 120px; height: 120px; object-fit: cover; cursor: pointer;"> 
       </div>
         <div class="text-start">
             <div class="mb-2" id="name-container">

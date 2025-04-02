@@ -7,13 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg justify-content-center bg-success">
+     <nav class="navbar navbar-expand-lg justify-content-center bg-success"> <!-- large navbar with centered contents -->
         <ul class="nav nav-pills">
-            <li class="nav-item position-absolute end-0 me-3">
-                <a href="#" class="nav-link text-light" onclick="logout()">Log Out</a>
+            <li class="nav-item position-absolute end-0 me-3"> <!-- log out link is at the right, not center -->
+                <a href="" class="nav-link text-light" onclick="logout()">Log Out</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light bg-secondary active" aria-current="page" href="">Blogs</a>
+              <a class="nav-link text-light bg-secondary active" href="">Blogs</a> <!-- active to highlight nav item -->
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="quiz.html">Quiz</a>
@@ -30,7 +30,7 @@
             <div class="blog-post mb-4">
                 <h2>What is Python?</h2>
                 <img src="./images/python.png" alt="python" class="d-block mx-auto">
-                <p class="text-muted">Published on March 31, 2025</p>
+                <p class="text-muted">Published on March 31, 2025</p> 
                 <p>Python is a high-level, general-purpose programming language known for its simplicity and readability.  It was designed to be easy to learn and use, making it a great choice for beginners while still being powerful enough for advanced developers. Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming.</p>
 
                 <p>One of Python’s biggest strengths is its vast ecosystem of libraries and frameworks, which allow developers to build applications ranging from web development and artificial intelligence to cybersecurity and automation. Its strong community and extensive documentation make problem-solving easier, further solidifying Python as one of the most popular programming languages today.</p>
